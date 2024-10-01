@@ -1,0 +1,273 @@
+:root {
+  --primary-color: #fff;
+  --secondary-color: #6e3d0f;
+  --makeup-color: #ffc791;
+  --sand-color: #ffe3c8;
+  --brick-color: #9d4e15;
+  --gray-color: #e7e5da;
+  background-color: var(--gray-color);
+  color: #000;
+  font-size: 16px;
+  font-family: "Poppins";
+}
+
+/* GLOBAL CSS */
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  font-weight: 100;
+  font-size: 4rem;
+  text-align: center;
+  margin: 0;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 1.5rem;
+  padding: 0px;
+  margin: 0px;
+}
+
+p {
+  padding: 0px;
+  margin: 0px;
+}
+
+/* viewHome CSS */
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-selection--wrapper {
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.home-selection--container {
+  height: 375px;
+  width: 350px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border: 5px solid var(--secondary-color);
+  border-radius: 25px;
+}
+
+.button-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.playername-container {
+  width: 100%;
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+.username-input {
+  width: 90%;
+  border: 5px solid var(--secondary-color);
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  border-radius: 25px;
+  color: var(--secondary-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.username-input:focus {
+  border-color: var(--makeup-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* button CSS */
+
+.round-button {
+  width: 97%;
+  height: 50px;
+  margin-bottom: 20px;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border: none;
+  border-radius: 25px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.round-button:hover {
+  transform: scale(1.03);
+  background-color: var(--makeup-color);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  color: var(--secondary-color);
+}
+
+/* viewLobby CSS */
+
+.lobby-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.lobby-no--gameid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.clipboard-container {
+  display: flex;
+  align-items: center;
+}
+
+.copy-button {
+  width: 100px;
+  height: 40px;
+  margin-left: 25px;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.copy-button:hover {
+  transform: scale(1.1);
+  background-color: var(--makeup-color);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  color: var(--secondary-color);
+}
+
+.lobby-players--container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 20px;
+  height: 250px;
+  margin: 20px 0px;
+}
+
+.player-container {
+  display: flex;
+  align-items: center;
+}
+
+.player-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.player-icon--1 {
+  background-color: var(--primary-color);
+  border: 2px solid var(--secondary-color);
+}
+
+.player-icon--2 {
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  border: 2px solid var(--primary-color);
+}
+
+.player-name {
+  margin: 0px 10px;
+  width: 180px;
+}
+
+.ready-button {
+  width: 160px;
+  height: 40px;
+  margin-left: 25px;
+  color: var(--primary-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.is-not--ready {
+  background-color: red;
+}
+.is-ready {
+  background-color: green;
+}
+
+.lobby-errors {
+  margin-top: -20px;
+  height: 50px;
+}
+
+/* viewGame CSS */
+
+.game-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+
+.game-info {
+  width: 100%;
+}
+
+.game-turn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.matrix-container {
+  display: grid;
+  grid-template-columns: repeat(3, 150px);
+  grid-template-rows: repeat(3, 150px);
+  gap: 10px;
+  background-color: var(--brick-color);
+  padding: 40px;
+  border-radius: 20px;
+}
+
+.matrix-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  background-color: #f0f0f0;
+  border: 1px solid #000;
+  cursor: pointer;
+  width: 150px;
+  height: 150px;
+}
